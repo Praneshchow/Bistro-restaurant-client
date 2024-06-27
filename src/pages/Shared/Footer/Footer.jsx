@@ -55,7 +55,7 @@ const Footer = () => {
             </div>
             <div className="bg-base-300 text-base-content p-4">
                     <aside>
-                        <p>Copyright © ${new Date().getFullYear()} - All right reserved. Pranesh Chowdhury Ltd</p>
+                        <p>Copyright © ${new Date().getFullYear()} - All right reserved. Pranesh Chowdhury.</p>
                     </aside>
                 </div>
         </footer>
