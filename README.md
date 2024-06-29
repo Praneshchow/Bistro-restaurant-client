@@ -25,8 +25,15 @@ Rating icons (Awesome react): `npm i @smastrom/react-rating`
 
 React-icons: `npm install react-icons --save`
 
+React-helmet-async for dynamic title: `npm i react-helmet-async`
+
+React-parallax: `npm i react-parallax`    [https://www.npmjs.com/package/react-parallax]
 
 <hr>
 
+Features:
 
+* Fetch API data. 
+* Custom Hook. 
+* 
 
