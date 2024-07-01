@@ -20,7 +20,10 @@
     "react-parallax": "^3.5.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.23.1",
+    "react-tabs": "^6.0.2",
+    "react-tabtab": "^2.0.0",
     "sort-by": "^1.2.0",
+    "styled-components": "^4.0.0",
     "swiper": "^11.1.4"
   },
   "devDependencies": {

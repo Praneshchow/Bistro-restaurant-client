@@ -1,4 +1,4 @@
-# Bistro Boss Restaurant 
+# Bistro Boss Restaurant Client
 
 Tools & Technology Used: React.js, React Router, Tailwind CSS, DaisyUI.
 
@@ -29,11 +29,15 @@ React-helmet-async for dynamic title: `npm i react-helmet-async`
 
 React-parallax: `npm i react-parallax`    [https://www.npmjs.com/package/react-parallax]
 
+React-tabtab: `npm install --save react-tabs`    [https://github.com/reactjs/react-tabs]
+
+
 <hr>
 
 Features:
 
 * Fetch API data. 
-* Custom Hook. 
-* 
+* Custom Hook - `useMenu()`. 
+* Tab format (category based data load in order section) and Pagination.
+
 
