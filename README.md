@@ -31,6 +31,9 @@ React-parallax: `npm i react-parallax`    [https://www.npmjs.com/package/react-p
 
 React-tabtab: `npm install --save react-tabs`    [https://github.com/reactjs/react-tabs]
 
+React Simple Captcha:  `npm i react-simple-captcha`     [https://www.npmjs.com/package/react-simple-captcha]
+
+
 
 <hr>
 
