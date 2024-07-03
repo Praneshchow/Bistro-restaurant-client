@@ -33,7 +33,7 @@ React-tabtab: `npm install --save react-tabs`    [https://github.com/reactjs/rea
 
 React Simple Captcha:  `npm i react-simple-captcha`     [https://www.npmjs.com/package/react-simple-captcha]
 
-
+React Hook Form (form related metarials): `npm install react-hook-form`      [https://www.react-hook-form.com/get-started]
 
 <hr>
 
@@ -41,6 +41,6 @@ Features:
 
 * Fetch API data. 
 * Custom Hook - `useMenu()`. 
-* Tab format (category based data load in order section) and Pagination.
-
+* Tab format (category based data load in order section) and Pagination. 
+* Authentication System (Login and Sign In using Firebase). 
 
