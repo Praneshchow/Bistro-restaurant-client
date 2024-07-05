@@ -31,9 +31,12 @@ React-parallax: `npm i react-parallax`    [https://www.npmjs.com/package/react-p
 
 React-tabtab: `npm install --save react-tabs`    [https://github.com/reactjs/react-tabs]
 
-React Simple Captcha:  `npm i react-simple-captcha`     [https://www.npmjs.com/package/react-simple-captcha]
+React Simple Captcha:  `npm i react-simple-captcha`   [https://www.npmjs.com/package/react-simple-captcha]
 
-React Hook Form (form related metarials): `npm install react-hook-form`      [https://www.react-hook-form.com/get-started]
+React Hook Form (form related metarials): `npm install react-hook-form`   [https://www.react-hook-form.com/get-started]
+
+Sweet Alert: `npm install sweetalert2`   [https://sweetalert2.github.io/#download]
+
 
 <hr>
 

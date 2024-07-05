@@ -27,6 +27,7 @@
     "react-tabtab": "^2.0.0",
     "sort-by": "^1.2.0",
     "styled-components": "^4.0.0",
+    "sweetalert2": "^11.12.1",
     "swiper": "^11.1.4"
   },
   "devDependencies": {
