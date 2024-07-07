@@ -37,13 +37,17 @@ React Hook Form (form related metarials): `npm install react-hook-form`   [https
 
 Sweet Alert: `npm install sweetalert2`   [https://sweetalert2.github.io/#download]
 
+React Icons: `npm install react-icons --save`     [https://react-icons.github.io/react-icons/]
 
 <hr>
 
 Features:
+----------------------------
 
 * Fetch API data. 
 * Custom Hook - `useMenu()`. 
 * Tab format (category based data load in order section) and Pagination. 
 * Authentication System (Login and Sign In using Firebase). 
+* Captcha check before login. 
+* 
 
