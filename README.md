@@ -7,11 +7,14 @@ Tools & Technology Used: React.js, React Router, Tailwind CSS, DaisyUI.
 ## Create and Setup project:
 
 ### Setup (React router)
+
 create react template: `npm create vite@latest name-of-your-project -- --template react`
 
 Then go to the directory: cd <your new project directory>
 
 npm install: `npm install react-router-dom localforage match-sorter sort-by`
+
+#### Run in local: `npm run dev` 
 
 <hr>
 
@@ -39,6 +42,9 @@ Sweet Alert: `npm install sweetalert2`   [https://sweetalert2.github.io/#downloa
 
 React Icons: `npm install react-icons --save`     [https://react-icons.github.io/react-icons/]
 
+Tanstack Query: `npm i @tanstack/react-query`
+
+
 <hr>
 
 Features:
@@ -46,8 +52,8 @@ Features:
 
 * Fetch API data. 
 * Custom Hook - `useMenu()`. 
-* Tab format (category based data load in order section) and Pagination. 
+* Tab format (category based data load in order section). 
 * Authentication System (Login and Sign In using Firebase). 
 * Captcha check before login. 
-* 
+* Food Cart Add. 
 
