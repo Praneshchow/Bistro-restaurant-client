@@ -1,8 +1,10 @@
 # Bistro Boss Restaurant Client
 
-Tools & Technology Used: React.js, React Router, Tailwind CSS, DaisyUI.
+GitHub Client Repository Link: https://github.com/Praneshchow/Bistro-restaurant-server
 
-
+#### Used Technology:
+Frontend: React, React Router, Tailwind CSS, DaisyUI, TanStack Query, Firebase.
+Backend: Express.js, Node.js, MongoDB.
 
 ## Create and Setup project:
 
