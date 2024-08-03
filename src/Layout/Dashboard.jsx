@@ -3,9 +3,16 @@ import { FaShoppingCart, FaWallet, FaRegCalendarAlt, FaHome } from "react-icons/
 import { TiThMenu } from "react-icons/ti";
 import { MdBorderColor } from "react-icons/md";
 import useCart from "../hooks/useCart";
+import { FaUtensils } from "react-icons/fa";
+import { FaList } from "react-icons/fa6";
+import { FaBook } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
 
 const Dashboard = () => {
     const [cart] = useCart();
+
+    // TODO. 
+    const isAdmin = true;
 
     return (
         <div className="drawer lg:drawer-open">
@@ -21,16 +28,27 @@ const Dashboard = () => {
             <div className="drawer-side bg-[#D1A054] pt-10">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                 <ul className="menu text-black min-h-full w-80 p-4 bg-[#D1A054]  text-lg">
-                    <li><NavLink to="/dashboard/home"><FaHome></FaHome>User Home</NavLink></li>
-                    <li><NavLink to="/dashboard/reservations"><FaRegCalendarAlt></FaRegCalendarAlt>Reservations</NavLink></li>
-                    <li><NavLink to="/dashboard/payment"><FaWallet></FaWallet>Payment History</NavLink></li>
-                    <li>
-                        <NavLink to="/dashboard/mycart">
-                            <FaShoppingCart></FaShoppingCart>My Cart
-                            <spam className="badge badge-secondary">+{cart?.length || 0}</spam>
-                        </NavLink>
+                    {
+                        isAdmin ? <>
+                            <li><NavLink to="/dashboard/home"><FaHome></FaHome>User Home</NavLink></li>
+                            <li><NavLink to="/dashboard/reservations"><FaUtensils /> Add Items</NavLink></li>
+                            <li><NavLink to="/dashboard/payment"><FaList /> Manage Items</NavLink></li>
+                            <li><NavLink to="/dashboard/payment"><FaBook /> Manage Bookings</NavLink></li>
+                            <li><NavLink to="/dashboard/allusers"><FaUsers /> All Users</NavLink></li>
+                            
+                        </> : <>
+                            <li><NavLink to="/dashboard/home"><FaHome></FaHome>User Home</NavLink></li>
+                            <li><NavLink to="/dashboard/reservations"><FaRegCalendarAlt></FaRegCalendarAlt>Reservations</NavLink></li>
+                            <li><NavLink to="/dashboard/payment"><FaWallet></FaWallet>Payment History</NavLink></li>
+                            <li>
+                                <NavLink to="/dashboard/mycart">
+                                    <FaShoppingCart></FaShoppingCart>My Cart
+                                    <spam className="badge badge-secondary">+{cart?.length || 0}</spam>
+                                </NavLink>
 
-                    </li>
+                            </li>
+                        </>
+                    }
 
                     <div className="divider"></div>
 
