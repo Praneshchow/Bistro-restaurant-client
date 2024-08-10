@@ -16,7 +16,7 @@ Then go to the directory: cd <your new project directory>
 
 npm install: `npm install react-router-dom localforage match-sorter sort-by`
 
-#### Run in local: `npm run dev` 
+#### Run in locally: `npm run dev` 
 
 <hr>
 

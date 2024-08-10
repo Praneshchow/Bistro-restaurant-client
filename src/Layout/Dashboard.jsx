@@ -7,12 +7,14 @@ import { FaUtensils } from "react-icons/fa";
 import { FaList } from "react-icons/fa6";
 import { FaBook } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
+import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
     const [cart] = useCart();
 
     // TODO. 
-    const isAdmin = true;
+    // const isAdmin = true;
+    const [isAdmin] = useAdmin();
 
     return (
         <div className="drawer lg:drawer-open">
