@@ -45,7 +45,7 @@ const Dashboard = () => {
                             <li>
                                 <NavLink to="/dashboard/mycart">
                                     <FaShoppingCart></FaShoppingCart>My Cart
-                                    <spam className="badge badge-secondary">+{cart?.length || 0}</spam>
+                                    <span className="badge badge-secondary">+{cart?.length || 0}</span>
                                 </NavLink>
 
                             </li>

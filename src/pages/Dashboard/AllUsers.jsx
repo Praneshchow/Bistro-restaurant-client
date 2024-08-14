@@ -3,13 +3,16 @@ import { Helmet } from "react-helmet-async";
 import { FaTrash } from "react-icons/fa";
 import { FaUserShield } from "react-icons/fa";
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const AllUsers = () => {
+    const [axiosSecure] = useAxiosSecure();
+
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/users')
-            return res.json();
+            const res = await axiosSecure.get('/users')
+            return res.data();
         }
     })
 
@@ -33,6 +36,7 @@ const AllUsers = () => {
         })
     }
 
+    // TODO: delete user. 
     // const handleDelete = user => {
 
     // }
@@ -69,7 +73,7 @@ const AllUsers = () => {
                                     <button onClick={() => handleMakeAdmin(user)} className="btn btn-ghost btn-lg bg-yellow-600 text-white"><FaUserShield /></button>
                                 }
                             </td>
-                            <td><button onClick={() => handleDelete(user)} className="btn btn-ghost btn-lg bg-red-700 text-white"><FaTrash></FaTrash></button></td>
+                            <td><button className="btn btn-ghost btn-lg bg-red-700 text-white"><FaTrash></FaTrash></button></td>
                         </tr>)
                         }
                         
