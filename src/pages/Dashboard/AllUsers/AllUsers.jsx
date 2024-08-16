@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { FaTrash } from "react-icons/fa";
 import { FaUserShield } from "react-icons/fa";
 import Swal from "sweetalert2";
-import useAxiosSecure from "../../hooks/useAxiosSecure";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 const AllUsers = () => {
     const [axiosSecure] = useAxiosSecure();
@@ -11,7 +11,8 @@ const AllUsers = () => {
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await axiosSecure.get('/users')
+            const res = await axiosSecure.get('/users');
+            // console.log("res in alluser: ", res.data);
             return res.data();
         }
     })
@@ -22,7 +23,8 @@ const AllUsers = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log("all user part running. ");
+            console.log("all user: ", data);
             if (data.modifiedCount){
                 refetch();
                 Swal.fire({
