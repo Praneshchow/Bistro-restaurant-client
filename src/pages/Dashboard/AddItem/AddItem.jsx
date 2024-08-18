@@ -1,13 +1,16 @@
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import { useForm } from 'react-hook-form';
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
-const img_hosting_token=import.meta.env.VITE_Image_Upload_token;
+const img_hosting_token = import.meta.env.VITE_Image_Upload_token;
 
 const AddItem = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const img_hosting_url = `https://api.imgbb.com/1/upload?expiration=600&key=${img_hosting_token}`;
-    
-    const onSubmit = data => { 
+    const [axiosSecure] = useAxiosSecure();
+    const { register, handleSubmit, reset } = useForm();
+    const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`;
+
+    const onSubmit = data => {
         // console.log("data: ", data);
 
         const formData = new FormData();
@@ -17,14 +20,36 @@ const AddItem = () => {
             method: 'POST',
             body: formData
         })
-        .then(res => res.json())
-        .then(imgResponse => {
-            console.log("img response: ", imgResponse);
-        })
+            .then(res => res.json())
+            .then(imgResponse => {
+                // console.log("img response: ", imgResponse);
+
+                if (imgResponse.success) {
+                    const imgURL = imgResponse.data.display_url;
+                    const { name, price, category, recipe } = data;
+                    const newItem = { name, price: parseFloat(price), category, recipe, image: imgURL };
+                    console.log("new item: ", newItem);
+
+                    axiosSecure.post('/menu', newItem)
+                        .then(data => {
+                            console.log('after posting new manu item', data.data);
+                            if (data.data.insertedId) {
+                                console.log("data inserted: ", data.data.insertedId);
+                                reset();
+                                Swal.fire({
+                                    title: "Item added successfully",
+                                    text: "New Menu",
+                                    icon: "success",
+                                    timer: 1200,
+                                });
+                            }
+                        })
+                }
+            })
     };
 
-    console.log(errors);
-    console.log("img host: ", img_hosting_token);
+    // console.log(errors);
+    // console.log("img host: ", img_hosting_token);
 
     return (
         <div className="w-full px-14 my-10">

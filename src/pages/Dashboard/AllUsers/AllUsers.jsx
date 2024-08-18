@@ -23,8 +23,7 @@ const AllUsers = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log("all user part running. ");
-            console.log("all user: ", data);
+            // console.log("all user: ", data);
             if (data.modifiedCount){
                 refetch();
                 Swal.fire({
