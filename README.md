@@ -3,7 +3,7 @@
 GitHub Client Repository Link: https://github.com/Praneshchow/Bistro-restaurant-server
 
 #### Used Technology:
-Frontend: React, React Router, Tailwind CSS, DaisyUI, TanStack Query, Firebase, sweetalert2, React Icon, Axios.
+Frontend: React, React Router, Tailwind CSS, DaisyUI, TanStack Query, Firebase, sweetalert2, React Icon, Axios, Stripe.
 
 Backend: Express.js, Node.js, MongoDB.
 
@@ -51,22 +51,30 @@ Tanstack Query: `npm i @tanstack/react-query`
 
 Axios:  `npm install axios`
 
+#### Stripe: 
 
+Install: `npm install --save @stripe/react-stripe-js @stripe/stripe-js`
+
+Stripe used for payment system. From stripe github (https://github.com/stripe/react-stripe-js), I used the hooks `0-card-minimal` (Read the document of stripe 0-card-minimal).  
 
 <hr>
 
 ### Features:
 ----------------------------
 
-* Fetch Menu items API data. 
+* Fetch Food items using API data. 
 * Custom Hook - useMenu(), useAuth(), useAxiosSecure(), useCart(). 
-* Tab format (category based data load in order section). 
+* Tab design (category based data load in order section). 
 * Authentication System (Login and Sign In using Firebase). 
 * Captcha check before login. 
-* Food Cart Add. 
-* Private route. 
-* User Dashboard. 
+* Food Cart system (listing of menu which user selected). 
+* Private route and Admin route for security acccess. 
+* User Dashboard.
+    * user can see the cart item. 
+    * user can pay the payment of cart items. 
 * Admin Dashboard.
+    * Admin can see the users and also can make user to new admin. 
+    * 
 * Used Axios for api data access. 
 * JWT token for autorization (locally stored the token).
 

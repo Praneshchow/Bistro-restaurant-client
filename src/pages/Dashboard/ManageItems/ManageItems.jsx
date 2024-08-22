@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 
 const ManageItems = () => {
-    const [menu, loading, refetch] = useMenu();
+    const [menu, , refetch] = useMenu();            // here the empty place is 'loading'. 
     const [axiosSecure] = useAxiosSecure();
 
     // console.log("menu: ", menu);

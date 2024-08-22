@@ -15,3 +15,11 @@ If possible use Axios to send jwt token by intercepting the request.
 2. if it is an admin activity. Make sure only admin user is posting data by using verifyAdmin. 
 
 
+# Payment Intregration Steps:
+
+1. install stripe and react stripe js
+2. create a checkout form with card element (card element contains: card number, expiration date, cvs, zip code). 
+3. create account on Stripe and get the publishable key pk. 
+
+
+
