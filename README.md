@@ -55,29 +55,36 @@ Axios:  `npm install axios`
 
 Install: `npm install --save @stripe/react-stripe-js @stripe/stripe-js`
 
-Stripe used for payment system. From stripe github (https://github.com/stripe/react-stripe-js), I used the hooks `0-card-minimal` (Read the document of stripe 0-card-minimal).  
+Stripe used for payment system. From [stripe github](https://github.com/stripe/react-stripe-js), I used the hooks `0-card-minimal` (Read the document of stripe 0-card-minimal). 
+
+In the backend part, [Custom payment flow](https://docs.stripe.com/payments/quickstart) I took the idea of backend development of stripe method. I created a new collection `payments` and it's API, where i store the payments data. 
 
 <hr>
 
-### Features:
+### Developed Features:
 ----------------------------
 
 * Fetch Food items using API data. 
-* Custom Hook - useMenu(), useAuth(), useAxiosSecure(), useCart(). 
+* Custom Hook: useMenu(), useAuth(), useAxiosSecure(), useCart(). 
+    * useMenu(): 
+    * useAuth(): For authentication.
+    * useAxiosSecure(): 
+    * useCart(): 
 * Tab design (category based data load in order section). 
 * Authentication System (Login and Sign In using Firebase). 
 * Captcha check before login. 
 * Food Cart system (listing of menu which user selected). 
-* Private route and Admin route for security acccess. 
+* Private route (user) and Admin route (admin) are individual private routes for security service. 
 * User Dashboard.
     * user can see the cart item. 
     * user can pay the payment of cart items. 
 * Admin Dashboard.
-    * Admin can see the users and also can make user to new admin. 
-    * 
+    * Admin can see the users and also can make user to new admin.
+* Admin and user access problem fixing using `loading` state. For fixing account login error, I used loading for completing the checking process. This one is very challenging to find out the error.  
 * Used Axios for api data access. 
 * JWT token for autorization (locally stored the token).
-
+* Payment system using `strip`. 
+* Payment information verify and changes in the user account.  
 
 
 

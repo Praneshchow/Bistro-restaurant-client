@@ -8,7 +8,7 @@ import Order from "../pages/Order/Order/Order";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import PrivateRoutes from "./PrivateRoutes";
-import Secret from "../pages/Shared/Secret/Secret";
+// import Secret from "../pages/Shared/Secret/Secret";
 import Dashboard from "../Layout/Dashboard";
 import MyCart from "../pages/Dashboard/MyCart/MyCart";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
@@ -16,6 +16,8 @@ import AddItem from "../pages/Dashboard/AddItem/AddItem";
 import AdminRoute from "./AdminRoute";
 import ManageItems from "../pages/Dashboard/ManageItems/ManageItems";
 import Payment from "../pages/Dashboard/Payment/Payment";
+import UserHome from "../pages/Dashboard/UserHome/UserHome";
+import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 
 
 export const router = createBrowserRouter([
@@ -43,16 +45,21 @@ export const router = createBrowserRouter([
                 path: 'signup',
                 element: <SignUp></SignUp>
             }, 
-            {
-                path: 'secret',
-                element: <PrivateRoutes><Secret></Secret></PrivateRoutes>
-            }
+            // private route testing. 
+            // {
+            //     path: 'secret',
+            //     element: <PrivateRoutes><Secret></Secret></PrivateRoutes>
+            // }
         ]
     },
     {
         path: 'dashboard',
         element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
         children: [
+            {
+                path: 'userhome',
+                element: <UserHome></UserHome> 
+            },
             {
                 path: 'mycart',
                 element: <MyCart></MyCart>
@@ -62,6 +69,10 @@ export const router = createBrowserRouter([
                 element: <Payment></Payment>
             },
             // admin route. 
+            {
+                path: 'adminhome',
+                element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+            },
             {
                 path: 'allusers',
                 element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
