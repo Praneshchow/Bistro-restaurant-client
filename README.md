@@ -87,4 +87,8 @@ In the backend part, [Custom payment flow](https://docs.stripe.com/payments/quic
 * Payment information verify and changes in the user account.  
 
 
+### Difficulties: 
+* When deploying in the netlify. It failed to deploy because the dependencies are not working. 
+
+
 
