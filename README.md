@@ -88,7 +88,13 @@ In the backend part, [Custom payment flow](https://docs.stripe.com/payments/quic
 
 
 ### Difficulties: 
-* When deploying in the netlify. It failed to deploy because the dependencies are not working. 
+* When deploying in the netlify. It failed to deploy because the dependencies are not working. So I uninstalled the `react-tabtab` then installed `react-tabs`. Then the dependencies error fixed. 
+* In backend, if i didn't `await client.connect();` remove this line. Then the backend server will show error. So i need to remove this line. 
+
+
+
+
+
 
 
 

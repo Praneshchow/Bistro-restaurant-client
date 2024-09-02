@@ -32,14 +32,14 @@ const Dashboard = () => {
                 <ul className="menu text-black min-h-full w-80 p-4 bg-[#D1A054]  text-lg">
                     {
                         isAdmin ? <>
-                            <li><NavLink to="/dashboard/home"><FaHome></FaHome>User Home</NavLink></li>
+                            <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>User Home</NavLink></li>
                             <li><NavLink to="/dashboard/addItem"><FaUtensils /> Add an Item</NavLink></li>
                             <li><NavLink to="/dashboard/manageitems"><FaList /> Manage Items</NavLink></li>
                             <li><NavLink to="/dashboard/payment"><FaBook /> Manage Bookings</NavLink></li>
                             <li><NavLink to="/dashboard/allusers"><FaUsers /> All Users</NavLink></li>
                             
                         </> : <>
-                            <li><NavLink to="/dashboard/home"><FaHome></FaHome>User Home</NavLink></li>
+                            <li><NavLink to="/dashboard/userhome"><FaHome></FaHome>User Home</NavLink></li>
                             <li><NavLink to="/dashboard/reservations"><FaRegCalendarAlt></FaRegCalendarAlt>Reservations</NavLink></li>
                             <li><NavLink to="/dashboard/payment"><FaWallet></FaWallet>Payment History</NavLink></li>
                             <li>
