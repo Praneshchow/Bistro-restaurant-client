@@ -1,8 +1,15 @@
 # Bistro Boss Restaurant Client
 
-GitHub Client Repository Link: https://github.com/Praneshchow/Bistro-restaurant-server
+GitHub Server Repository Link: https://github.com/Praneshchow/Bistro-restaurant-server
 
-#### Used Technology:
+### User email & Password:
+```
+Email: user10@gmail.com
+
+Password: User10
+```
+
+### Used Technologies:
 Frontend: React, React Router, Tailwind CSS, DaisyUI, TanStack Query, Firebase, sweetalert2, React Icon, Axios, Stripe.
 
 Backend: Express.js, Node.js, MongoDB.
