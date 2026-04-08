@@ -27,9 +27,9 @@ const Dashboard = () => {
 
 
             </div>
-            <div className="drawer-side bg-[#D1A054] pt-10">
+            <div className="drawer-side bg-[#38393b] pt-10">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="menu text-black min-h-full w-80 p-4 bg-[#D1A054]  text-lg">
+                <ul className="menu text-black min-h-full w-80 p-4 bg-[#38393b]  text-lg">
                     {
                         isAdmin ? <>
                             <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome>User Home</NavLink></li>
