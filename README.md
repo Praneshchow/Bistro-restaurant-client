@@ -99,7 +99,8 @@ In the backend part, [Custom payment flow](https://docs.stripe.com/payments/quic
 * In backend, if i didn't `await client.connect();` remove this line. Then the backend server will show error. So i need to remove this line. 
 
 
-
+## Update (Note): 
+* I improved the restaurant project's security and dependency quality by reducing vulnerabilities from 38 to 4 through updating Axios, Vite, React Router, Firebase and other development packages. Resolved dependency conflicts while maintaining React 18 compatibility without introducing breaking changes. 
 
 
 
