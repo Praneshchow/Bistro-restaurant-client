@@ -100,9 +100,12 @@ In the backend part, [Custom payment flow](https://docs.stripe.com/payments/quic
 
 
 ## Update (Note): 
-* I improved the restaurant project's security and dependency quality by reducing vulnerabilities from 38 to 4 through updating Axios, Vite, React Router, Firebase and other development packages. Resolved dependency conflicts while maintaining React 18 compatibility without introducing breaking changes. 
+- I improved the restaurant project's security and dependency quality by reducing vulnerabilities from 38 to 4 through updating Axios, Vite, React Router, Firebase and other development packages. Resolved dependency conflicts while maintaining React 18 compatibility without introducing breaking changes. 
 
-
+- Performance Improvements (Aug 22, 2026): 
+    - Images: Compressed banner/menu images from MB-scale down to KB-scale -> cut estimated image payload savings from 16,750 KiB to 336 KiB. 
+    - Netlify build: Fixed a stuck deployment. Build was failing on Node 18 (Vite 8 requires Node ≥20), which is why old large images kept showing on the live site even after pushing fixes. Set NODE_VERSION to 20 in Netlify's environment variables to resolve it. 
+    - Result: First Contentful Paint: 6.5s to 3.1s, Speed Index: 6.5s to 3.3s. 
 
 
 
